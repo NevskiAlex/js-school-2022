@@ -1,0 +1,24 @@
+body {
+  margin: 0 0 40px;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+button {
+  background: none;
+  border: 1px solid #f3f3f3;
+
+  &.btn {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 180px;
+    border: 1px solid #f9e;
+    padding: 10px;
+  }
+}

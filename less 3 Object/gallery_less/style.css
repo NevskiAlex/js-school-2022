@@ -1,0 +1,28 @@
+body {
+  background: #cfcfcf;
+}
+
+.gallery {
+  margin: 0 auto;
+  width: 220px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery img {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: all 0.2s;
+}
+
+.gallery img.show {
+  opacity: 1;
+}
+
+.buttons {
+  padding: 10px;
+}
