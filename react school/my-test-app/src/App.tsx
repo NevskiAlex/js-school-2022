@@ -5,7 +5,7 @@ import Form from "./components/form";
 
 function App() {
   const [switcher, setSwitcher] = useState(true);
-  const [data, setData] = useState([]);
+  const [myDataLocal, setMyDataLocal] = useState([]);
   const [shower, setshower] = useState(true);
 
   const myClick = () => {
@@ -15,17 +15,42 @@ function App() {
     setshower(!shower);
   };
 
-  useEffect(() => {
-    fetch("https://63a48578821953d4f2b71eb2.mockapi.io/api/v1/doto-list")
-      .then((response) => response.json())
-      .then((data) => setData(data));
-  }, [switcher]);
+  // useEffect(() => {
+  //   fetch("https://63a48578821953d4f2b71eb2.mockapi.io/api/v1/doto-list")
+  //     .then((response) => response.json())
+  //     .then((myDataFromServer) => setMyDataLocal(myDataFromServer));
+  // }, []);
 
-  useEffect(() => {
-    fetch("https://63a48578821953d4f2b71eb2.mockapi.io/api/v1/homework-2")
-      .then((response) => response.json())
-      .then((data) => setData(data));
-  }, [shower]);
+  // myDataLocal.map(()=>{})
+  // console.log();
+
+  // for (var i=0, i < myDataLocal.length , i++) {
+  //   myDataLocal[i];
+  // }
+
+  let element: any[] = [];
+
+  myDataLocal.forEach((item: { Friends: any }, index) => {
+    // console.log("myitem", index, item);
+    // element.push(item.name);
+    // element.push(item.Friends);
+
+    item.Friends.forEach(
+      (friend: { age: number; name: string }, index2: number) => {
+        // console.log("myFriend", index2, friend.age);
+        element.push(friend.name);
+      }
+    );
+  });
+
+  // console.log("<0>", element);
+
+  const fn = (a: string, b: number, c: boolean, d: any, e: any): any => {
+    console.log(a, b, c, d, e);
+    return a + b;
+  };
+
+  console.log("<0>", fn("hello", 1, true, ["x1"], { a: 1 }));
 
   return (
     <div className="App">
@@ -39,9 +64,14 @@ function App() {
           </p>
         )}
       </header>
-      <p>test text P</p>
-      {data &&
-        data.map((item: any) => {
+      <div>
+        Friends:
+        <ul>
+          {element && element.map((myName) => <li key={myName}>{myName}</li>)}
+        </ul>
+      </div>
+      {myDataLocal &&
+        myDataLocal.map((item: any) => {
           // console.log(item);
           return (
             <div key={item.name}>
@@ -66,11 +96,11 @@ function App() {
           // console.log(value);
           const newData: any = {
             name: value.name,
-            id: data.length + 1,
+            id: myDataLocal.length + 1,
             done: value.checkbox,
           };
 
-          setData([...data, newData as never]);
+          setMyDataLocal([...myDataLocal, newData as never]);
         }}
       />
     </div>

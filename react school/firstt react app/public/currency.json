@@ -1,0 +1,38 @@
+{
+  "usd": {
+    "eur": {
+      "code": "EUR",
+      "name": "Euro",
+      "rate": 0.9
+    },
+    "grn": {
+      "code": "grn",
+      "name": "grivna",
+      "rate": 40.5
+    }
+  },
+  "eur": {
+    "usd": {
+      "code": "EUR",
+      "name": "Euro",
+      "rate": 1.1
+    },
+    "grn": {
+      "code": "grn",
+      "name": "grivna",
+      "rate": 42.5
+    }
+  },
+  "grn": {
+    "usd": {
+      "code": "EUR",
+      "name": "Euro",
+      "rate": 0.032
+    },
+    "eur": {
+      "code": "grn",
+      "name": "grivna",
+      "rate": 0.0325
+    }
+  }
+}

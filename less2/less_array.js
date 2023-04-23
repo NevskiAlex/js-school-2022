@@ -18,20 +18,20 @@
 
 // пример 2
 
-// const numbers = [-100, 5, 150, 30, 40, 850];
+const numbers = [-100, 5, 150, 30, 40, 850];
 
-// let maxNumber = numbers[0];
-// let minNumber = numbers[0];
+let maxNumber = numbers[0];
+let minNumber = numbers[0];
 
-// for (let number of numbers) {
-//     if (number > maxNumber) {
-//         maxNumber = number;
-//     }
-//     if (number < minNumber) {
-//         minNumber = number;
-//     }
-//     console.log(number);
-// }
+for (let number of numbers) {
+  if (number > maxNumber) {
+    maxNumber = number;
+  }
+  if (number < minNumber) {
+    minNumber = number;
+  }
+  console.log(number);
+}
 
 // console.log("Max:", maxNumber);
 // console.log("Min:", minNumber);

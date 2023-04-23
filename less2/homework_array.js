@@ -32,6 +32,7 @@ const sumInput = function () {
   let array = [];
   let input;
   let sum = 0;
+  
   while (true) {
     input = prompt("write number", 0);
 

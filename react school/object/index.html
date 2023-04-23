@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // const e = "test_e";
+    const obj = { a: 1, b: "sdf", c: { tt: "pp" } };
+    const obj2 = obj;
+    obj.d = "stroke 1";
+    obj["e"] = "stroke 2";
+    let arr = Object.keys(obj).map((key) => key);
+    // console.log((obj2.f = "xx"));
+    // console.log(arr);
+
+    const newObject = Object.assign({}, obj); //копирование обьекта 1 уровня
+    newObject.c.ss = "vv";
+    console.log(newObject);
+
+    // console.log(obj === obj2);
+    // console.log(obj === newObject);
+    console.log(obj);
+
+    const objCopy = {
+      a: 40,
+      b: "fdf",
+      e: { aa: 10 },
+      c: () => {
+        return "hello" + this.a;
+      },
+      d: function () {
+        return objCopy.a;
+      },
+    };
+
+    const copyObj = JSON.stringify(objCopy);
+    console.log(copyObj);
+
+    console.log(JSON.parse(copyObj));
+    console.log(objCopy.d());
+    console.log(objCopy.d.apply(obj));
+  </script>
+</html>

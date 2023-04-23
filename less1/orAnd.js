@@ -33,7 +33,8 @@ if (age <= 14 || age >= 90) {
 
 let input = prompt("ваш логин?", "");
 let pass;
-if (input === "админ") {
+
+if (input === "admin") {
   pass = prompt("you pass?", "");
 } else {
   alert("я вас не знаю");
