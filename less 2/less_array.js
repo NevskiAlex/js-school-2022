@@ -79,7 +79,7 @@ for (let number of numbers) {
 // console.log(array2.concat(array3));
 
 // разделяем массив на буквы
-// const str = ' разбираем строку на буквы';
+const str = ' разбираем строку на буквы';
 console.log(str.split("").reverse().join("-"));
 const result = str.split("");
 console.log(result);
