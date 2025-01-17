@@ -6,6 +6,8 @@
     <title>Document</title>
   </head>
   <body>
+    <p>xdfs df 
+    </p>
     <!-- <script>
     let letter = "background-color";
     let arr = letter.split("-");
@@ -116,6 +118,63 @@
 
       console.log(sumStr(2, 3));
     </script> -->
+<!-- 
+    <script>
+      let array = [34, 15, 88, 2];
+
+      let min = function(args){
+        let minNumber = args[0];
+
+        for(let number of args ){
+          if(number < minNumber){
+            minNumber = number;
+          }
+        }
+
+        
+
+        return minNumber;
+      }
+
+      console.log(min(array));
+      
+     //   ****2VAR *****
+      console.log(Math.min(...array));
+
+   
+    </script> -->
+<!-- 
+    <script>
+      function check(a, x) {
+      return a.includes(x);
+    }
+    console.log(check(["1", 23], "1"));
+
+    </script> -->
+
+    <script>
+     function lastPetalPhrase(petals) {
+  const phrases = [
+    "I love you",
+    "a little",
+    "a lot",
+    "passionately",
+    "madly",
+    "not at all"
+  ];
+
+  // Calculate the index of the last phrase
+  const lastPhraseIndex = (petals - 1) % phrases.length;
+  console.log(lastPhraseIndex);
+  
+
+  // Return the corresponding phrase
+  return phrases[lastPhraseIndex];
+}
+
+// Example usage
+console.log(lastPetalPhrase(12)); 
+    </script>
     
   </body>
 </html>
